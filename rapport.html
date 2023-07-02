@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>IFT2255 E23 DM1</title>
+    <title>IFT2255 E23 DM2</title>
     <style type="text/css">
         table
         {
@@ -23,7 +23,7 @@
 </head>
 <body>
     <h1 style="text-align: center;">
-        IFT 2255 - Été 2023 - Devoir 1</h1>
+        IFT 2255 - Été 2023 - Devoir 2</h1>
     <h2>
         Information générale</h2>
     <p>
@@ -191,241 +191,10 @@
         5.b L'utilisateur demande l'envoi d'un nouvel email/sms de confirmation.<br>
         <span style="font-weight: bold;">Postconditions :</span> Un nouveau compte utilisateur est créé et l'utilisateur est en mesure de se connecter à l'outil Robotix.<br>
     </p>
-    <p>
-        <span style="font-weight: bold;">Cas d'utilisation : Enregistrer un robot</span><br>
-        <span style="font-weight: bold;">But :</span>Permettre aux possesseurs d'enregistrer un nouveau robot dans leur flotte<br>
-        <span style="font-weight: bold;">Préconditions :</span>Être inscrit sur Robotix et posséder un robot avec un numéro de série <br>
-        fourni par le fournisseur<br>
-        <span style="font-weight: bold;">Acteurs :</span> Poccesseurs de robot(s) (principal), l'outil Robotix (secondaire).<br>
-        <span style="font-weight: bold;">Scénario principal :</span><br>
-        1. Le possesseur se connecte à son compte Robotix;<br>
-        2. Le possesseur sélectionne l'option "Enregistrer un robot";<br>
-        3. Le possesseur entre le numéro de série du robot, le nom et le type du robot;<br>
-        4. L'outil Robotix vérifie les informations entrées;<br>
-        5. L'outil Robotix enregistre le nouveau robot dans la base de données;<br>
-        6. L'outil Robotix confirme à l'utilisateur que le robot a été enregistré avec succès.<br>
-        <span style="font-weight: bold;">Scénarios alternatifs :</span><br>
-        1.a Le possesseur n'a plus accès, ou a oublié ses données de connection à son compte Robotix;<br>
-        3.a Le possesseur entre un numéro de série qui n'est pas unique;<br>
-        3.b L'outil Robotix informe l'utilisateur que le numéro de série est déjà utilisé et demande une nouvelle saisie;<br>
-        6.a Le possesseur ne recoit pas de confirmation d'enregistrement car l'email/sms rataché au compte n'est pas à jour.;<br>
-        <span style="font-weight: bold;">Postconditions :</span>Un nouveau robot est enregistré et ajouté à la flotte Robotix du possesseur.<br>
-    </p>
-    <p>
-        <span style="font-weight: bold;">Cas d'utilisation : Acheter des composantes</span><br>
-        <span style="font-weight: bold;">But :</span>Acquérir des composantes supplémentaires pour construire ou améliorer son robot.<br>
-        <span style="font-weight: bold;">Préconditions :</span>Être inscrit sur Robotix et le fournisseur choisi doit avoir la capacité de <br>
-        fabrication pour les composantes souhaitées par le possesseur de robot(s).<br>
-        <span style="font-weight: bold;">Acteurs :</span> Poccesseurs de robot(s) (principal), Fournisseur et l'outil Robotix (secondaire).<br>
-        <span style="font-weight: bold;">Scénario principal :</span><br>
-        1. Le possesseur se connecte à son compte Robotix;<br>
-        2. Le possesseur sélectionne l'option "Acheter des composantes";<br>
-        3. L'outil Robotix affiche une liste des fournisseurs disponibles avec les détails de leurs composantes;<br>
-        4. Le possesseur choisit un fournisseur et selectionne la ou les composantes à travers la liste des composantes<br> 
-         disponibles (CPU, roues, bras, hélice, caméra, haut-parleur, micro ou écran), dont un CPU s'il n'en possède pas encore;<br>
-        5. Le possesseur valide sa sélection qu'il ajoute au panier d'achat;<br>
-        6. Le possesseur procède au paiement pour confirmer l'achat;<br>
-        7. L'outil Robotix valide l'achat en notifiant le possesseur;<br>
-        8. Le fournisseur envoie la ou les composante(s) à l'adresse du possesseur.<br>
-        <span style="font-weight: bold;">Scénarios alternatifs :</span><br>
-        1.a Le possesseur n'a plus accès, ou a oublié ses données de connection à son compte Robotix;<br>
-        5.a.1 Une composante séléctionnée n'est pas disponible chez le fournisseur;<br>
-        5.a.2 Le possesseur peut choisir un autre founisseur ou supprimer cette composante de son panier;<br>
-        6.a.1 Le posssesseur n'a pas assez de fonds pour finaliser le paiement;<br>
-        6.a.2 Une erreur indique les fonds inssuffisant et le possesseur doit retirer des composantes ou ajouter des fonds à son compte;<br>
-        8.a.1 Le fournisseur n'arrive pas à aboutir à la livraison de la composante;<br>
-        8.a.2 Le suivi de livraison doit permettre à l'acheteur de récupérer son colis.<br>
-        <span style="font-weight: bold;">Postconditions :</span>Les composantes sélectionnées sont achetées et le possesseur de robot(s) reçoit sa commande.<br>
-    </p>
-    <p>
-        <span style="font-weight: bold;">Cas d'utilisation : Contrôler des mouvements</span><br>
-        <span style="font-weight: bold;">But :</span>Contrôler les mouvements d'un ou plusieurs robots.<br>
-        <span style="font-weight: bold;">Préconditions :</span>Être inscrit sur Robotix, le robot à controler doit est enregistré sur Robotix, être équipé d'un CPU et de roues ou hélices<br>
-        <span style="font-weight: bold;">Acteurs :</span> Possessseur de robot(s) (principal), Robot(s) et l'outil Robotix (secondaire).<br>
-        <span style="font-weight: bold;">Scénario principal :</span><br>
-        1. Le possesseur se connecte à son compte Robotix;<br>
-        2. Le possesseur sélectionne l'option "Contrôler des mouvements";<br>
-        3. L'outil Robotix affiche une liste des robots disponibles sur le compte Robotix du possesseur;<br>
-        4. Le possesseur choisit le ou les robot(s) qu'il souhaite contrôler;<br>
-        5. Le possesseur donne des instructions de mouvement à son robot, spécifiant le déplacement (vitesse et direction) et le stationnement;<br>
-        6. Le robot exécute les instructions de mouvement.<br>
-        <span style="font-weight: bold;">Scénarios alternatifs :</span><br>
-        1.a Le possesseur n'a plus accès, ou a oublié ses données de connection à son compte Robotix;<br>
-        4.a Le robot que le possesseur veut utiliser n'est pass disponible, il doit donc enregitrer ce robot avant de pouvoir le contrôler.<br>
-        6.a Si le robot n'a pas les composantes nécessaires pour se déplacer, l'outil Robotix affiche un message d'erreur au possesseur;<br>
-        6.b Si le robot n'est pas capable d'exécuter les instructions pour une autre raison, comme la batterie ou un obtacle, l'outil Robotix doit le signaler au possesseur;<br>
-        <span style="font-weight: bold;">Postconditions :</span> Le robot effectue les instructions de mouvement envoyés via l'outil Robotix par le possesseur<br>
-    </p>
-    <p>
-        <span style="font-weight: bold;">Cas d'utilisation : Créér des actions</span><br>
-        <span style="font-weight: bold;">But :</span>Permettre au possesseur de robot(s) de définir une série d'actions que les robots peuvent exécuter.<br>
-        <span style="font-weight: bold;">Préconditions :</span>Être inscrit sur Robotix, le robot à controler doit être enregistré sur Robotix et doit avoir les composantes nécessaires pour exécuter ces actions<br>
-        <span style="font-weight: bold;">Acteurs :</span> Possesseur de robot(s) (principal), Robot(s) et l'outil Robotix (secondaire).<br>
-        <span style="font-weight: bold;">Scénario principal :</span><br>
-        1. Le possesseur se connecte à son compte Robotix;<br>
-        2. Le possesseur sélectionne l'option "Créér des actions";<br>
-        3. Le possesseur sélectionne le type d'action qu'il souhaite créer (diffuser des sons, parler, écouter et afficher du texte ou des graphiques);<br>
-        4. Le possesseur définit les paramètres de l'action (direction et vitesse pour un mouvement);<br>
-        5. Le possesseur sauvegarde l'action créée.<br>
-        6. L'outil Robotix confirme que l'action a été créée avec succès.<br>
-        <span style="font-weight: bold;">Scénarios alternatifs :</span><br>
-        1.a Le possesseur n'a plus accès, ou a oublié ses données de connection à son compte Robotix;<br>
-        3.a Le possesseur tente de créer une action que le robot n'est pas capable d'exécuter et une erreur indique la composante manquante;<br>
-        4.a Le possesseur fait une erreur en définissant les paramètres de l'action et doit pouvoir les modifier.<br>
-        <span style="font-weight: bold;">Postconditions :</span> Une nouvelle action est créée et associée au robot sélectionné.<br>
-    </p>
-    <p>
-        <span style="font-weight: bold;">Cas d'utilisation : Gérer des tâches</span><br>
-        <span style="font-weight: bold;">But :</span> Permettre au posssesseur de robot(s) de créer et d'assigner des tâches au(x) robot(s)<br>
-        <span style="font-weight: bold;">Préconditions :</span> Être inscrit sur Robotix, le robot à controler doit être enregistré sur Robotix et doit avoir les composantes et <br>
-        les actions nécessaires pour exécuter ces tâches<br>
-        <span style="font-weight: bold;">Acteurs :</span> Possesseur de robot(s) (principal), Robot(s) et l'outil Robotix (secondaire).<br>
-        <span style="font-weight: bold;">Scénario principal :</span><br>
-        1. Le possesseur se connecte à son compte Robotix;<br>
-        2. Le possesseur sélectionne l'option "Gérer des tâches";<br>
-        3. Le possesseur sélectionne l'option "Créer une tâche";<br>
-        4. Le possesseur sélectionne le ou les robots pour lesquels il veut créer une tâche;<br>
-        5. Le possesseur sélectionne une ou plusieurs actions à inclure dans la tâche ainsi que l'ordre de ces actions;<br>
-        6. Le possesseur sauvegarde la tâche;<br>
-        7. L'outil Robotix confirme que la tâche a été créée et assignée avec succès.<br>
-        <span style="font-weight: bold;">Scénarios alternatifs :</span><br>
-        1.a Le possesseur n'a plus accès, ou a oublié ses données de connection à son compte Robotix;<br>
-        4.a Le ou les robots selectionnés ne sont pas capables d'executer la tâche et un message d'erreur affiche les composantes manquantes ou la source du problème;<br>
-        5.a Le possesseur a fait une erreur dans les actions définissant une tâche et/ou souhaite modifier la tâche ou son assignation;<br>
-        <span style="font-weight: bold;">Postconditions :</span> Une nouvelle tâche est créée et assignée à un ou plusieurs robots<br>
-    </p>
-    <p>
-        <span style="font-weight: bold;">Cas d'utilisation : Afficher l'état des mes robots</span><br>
-        <span style="font-weight: bold;">But :</span> Faire connaitre à l'utilisateur l'état d'un robot 
-        de sa flotte<br>
-        <span style="font-weight: bold;">Préconditions :</span> avoir créé un compte et avoir des robots fonctionnels
-        dans sa flotte<br>
-        <span style="font-weight: bold;">Acteurs :</span> Utilisateur (principal), Robots (secondaire) <br>
-        <span style="font-weight: bold;">Scénario principal :</span><br>
-        1. L'utilisateur se connecte à son compte robotix<br>
-        2. L'utilisateur sélectionne l'option "Afficher l'état de mes robots" <br>
-        3. L'utilisateur sélectionne un robot dont il veut voir l'état<br>
-        3. L'état du robot sélectionné est affichées sur l'écran<br>
-        <span style="font-weight: bold;">Scénarios alternatifs :</span><br>
-        2b.1 L'utilisateur n'a aucun robot dans sa flotte<br>
-        2b.2. Il est affiché sur l'écran qu'il est impossible d'afficher l'état car il n'y a aucun robots 
-        dans la flotte<br>
-        <span style="font-weight: bold;">Postconditions :</span> Une fois que le système a afficher l'état,
-        il est prêt à effectuer un autre cas d'utilisation<br>
-    </p>
-    <p>
-        <span style="font-weight: bold;">Cas d'utilisation : Afficher les métriques de ma flotte</span><br>
-        <span style="font-weight: bold;">But :</span> permettre à l'utilisateur de prendre connaissance des métriques
-        de toute sa flotte<br>
-        <span style="font-weight: bold;">Préconditions :</span> l'utilisateur a créé un compte et possède des robots
-        dans sa flotte<br>
-        <span style="font-weight: bold;">Acteurs :</span> Utilisateur (principal), Robots (secondaire)<br>
-        <span style="font-weight: bold;">Scénario principal :</span><br>
-        1. L'utilisateur se connecte à son compte robotix<br>
-        2. L'utilisateur sélectionne l'option "Afficher les métriques de ma flotte" <br>
-        3. Les métriques de la flotte de l'utilisateur sont affichées sur l'écran<br>
-        4. <br>
-        <span style="font-weight: bold;">Scénarios alternatifs :</span><br> ramifications du déroulement
-        principal, alternatives possibles à certaines étapes<br>
-        3a.1. l'utilisateur n'a pas de robots dans sa flotte<br>
-        3a.2. il est affiché sur l'écran qu'il est impossible de montrer les métriques car il n'y a pas de robots
-        dans la flotte<br>
-        <span style="font-weight: bold;">Postconditions :</span> Une fois que le système a afficher les métriques,
-        il est prêt à effectuer un autre cas d'utilisation<br>
-    </p>
-    <p>
-        <span style="font-weight: bold;">Cas d'utilisation : Voir les activités que je maintiens</span><br>
-        <span style="font-weight: bold;">But :</span> permettre à l'utilisateur de connaître les activités qu'il
-        est en train de maintenir<br>
-        <span style="font-weight: bold;">Préconditions :</span> L'utilisateur a créé un compte<br>
-        <span style="font-weight: bold;">Acteurs :</span> Utilisateur (principal), Robots (secondaire).<br>
-        <span style="font-weight: bold;">Scénario principal :</span><br>
-        1. L'utilisateur se connecte à son compte<br>
-        2. L'utilisateur sélectionne l'option "voir les activités que je maintiens"<br>
-        3. Il est affiché sur l'écran les activités présentement maintenues par l'utilisateur<br>
-        <span style="font-weight: bold;">Scénarios alternatifs :</span><br> ramifications du déroulement
-        principal, alternatives possibles à certaines étapes<br>
-        2a.1. l'utilisateur n'a pas de robots dans sa flotte ou aucune activité n'a été entré<br>
-        2a.2. un message informe l'utilisateur qu'il est impossible de voir les activitées car il n'y
-        a pas de robots ou d'activités dans sa flotte <br>
-        <span style="font-weight: bold;">Postconditions :</span> Une fois que le système a afficher les activitées,
-        il est prêt à effectuer un autre cas d'utilisation<br>
-    </p>
-    <p>
-        <span style="font-weight: bold;">Cas d'utilisation : Gérer des problèmes</span><br>
-        <span style="font-weight: bold;">But :</span> Permettre à l'utilisateur de répondre aux problèmes et aux
-        anomalies concernant les robots de sa flotte<br>
-        <span style="font-weight: bold;">Préconditions :</span> l'utilisateur a créé un compte et a affecté des taches a ses
-        robots. Une erreur ou une anomalie concernant un de ses robots survient<br>
-        <span style="font-weight: bold;">Acteurs :</span> Acteur 1 (principal), Acteur 2
-        (secondaire).<br>
-        <span style="font-weight: bold;">Scénario principal :</span><br>
-        1. L'utilisateur se connecte à son compte robotix<br>
-        2. Une erreur ou une anomalie est détectée chez un des robots de la flotte<br>
-        3. Une alerte contenant un message d'erreur et les actions possibles à prendre est affichée sur l'écran<br>
-            3.1 L'utilisateur sélectionne une action à prendre<br>
-            3.2 L'action est prise et le message d'erreur disparait<br>
-        4. L'utilisateur poursuit ses activitées<br>
-        <span style="font-weight: bold;">Scénarios alternatifs :</span><br> ramifications du déroulement
-        principal, alternatives possibles à certaines étapes<br>
-        1a.1. remplace étape 1 du scenario principal<br>
-        1b.1. autre remplacement de la même étape<br>
-        1b.2. suit 1b.1 indépendamment du scénario principal<br>
-        <span style="font-weight: bold;">Postconditions :</span> L'erreur qui a survenue est addressé par l'utilisateur
-        si il le désire<br>
-    </p>
-    <p>
-        <span style="font-weight: bold;">Cas d'utilisation : Trouver un fournisseur</span><br>
-        <span style="font-weight: bold;">But :</span>Permettre à l'utilisateur de trouver un fournisseur de composantes
-        ou de robots selon des critères de recherche spécifique<br>
-        <span style="font-weight: bold;">Préconditions :</span> Un utilisateur a un compte et des fournisseurs
-        ont également créé un compte<br>
-        <span style="font-weight: bold;">Acteurs :</span> Utilisateur (principal), Fournisseurs
-        (secondaire).<br>
-        <span style="font-weight: bold;">Scénario principal :</span><br>
-        1. L'utilisateur se connecte à son compte<br>
-        2. L'utilisateur sélectionne l'option "trouver un fournisseur"<br>
-        3. Une liste avec les fournisseurs enregistrée est affichée<br>
-        4. L'utilisateur navigue la liste et sélectionne celui qui lui convient<br>
-        5. L'utilisateur selectionne l'option "quitter" pour revenir au menu principal<br>
-        <span style="font-weight: bold;">Scénarios alternatifs :</span><br>
-        3a.1. Si aucun fournisseur n'est enregistré, la liste est vide et un message affiche qu'aucun fournisseur
-        n'est disponible<br>
-        3b.1 L'utilisateur des filtres à appliquer sur la liste de fournisseur <br>
-        3b.2 La liste de fournisseur est affichée en prenant compte des filtres spécifié par l'utilisateur<br>
-        3b.3 L'utilisateur choisi le fournisseur qui lui convient<br>
-        3b.4 L'utilisateur selectionne l'option "quitter" pour revenir au menu principal<br>
-        3c.1 L'utilisateur utilise l'outil de recherche pour trouver un mot-clé particulier<br>
-        3c.2 La liste de fournisseurs contenant le terme recherché est affiché<br>
-        3c.3 L'utilisateur choisi le fournisseur qui lui convient.<br>
-        3c.4 L'utilisateur selectionne l'option "quitter" pour revenir au menu principal<br>
-        
-        <span style="font-weight: bold;">Postconditions :</span> L'utilisateur est désormais associé avec un nouveau
-        fournisseur<br>
-    </p>
-    <p>
-        <span style="font-weight: bold;">Cas d'utilisation : Participer à des activités</span><br>
-        <span style="font-weight: bold;">But :</span> Donner l'opportunité aux utilisateurs de participer à
-        diverses activitées avec leur flotte de robot <br>
-        <span style="font-weight: bold;">Préconditions :</span> L'utilisateur a créé un comptre et possède un
-        flotte de robots<br>
-        <span style="font-weight: bold;">Acteurs :</span> Utilisateur (principal), Robots (secondaire).<br>
-        <span style="font-weight: bold;">Scénario principal :</span><br>
-        1. L'utilisateur se connecte à son compte<br>
-        2. L'utilisateur sélectionne l'option "Participer à des activitées<br>
-        3. Une liste des activitées disponibles s'affiche à l'écran<br>
-        4. L'utilisateur navigue la liste et sélectionne l'activité à laquelle il veut participer<br>
-        5. L'utilisateur participe à l'activité<br>
-        6. Une fois l'activité terminée, l'utilisateur revient au menu principal<br>
-        <span style="font-weight: bold;">Scénarios alternatifs :</span><br>
-        3a.1. Si aucune activitée n'est disponible, un message est affiché sur l'écran pour en informer l'utilisateur
-        qui est ensuite renvoyé au menu principal<br>
-        <span style="font-weight: bold;">Postconditions :</span> Une fois l'activité complétée, l'utilisateur peut
-        choisir une autre action à effectuer<br>
-    </p>
-    <p>
-        <h2>Tâche 4 : Diagrammes de séquence UML</h2>
-        1. Certaines exigences tel que la gestion des problème et le déroulement des activités sont vagues<br>
+
+
+    <h2>Tâche 4 : Diagrammes de séquence UML</h2>
+    <p> 1. Certaines exigences tel que la gestion des problème et le déroulement des activités sont vagues<br>
         2. Il y a un risque que l'architecture ne puisse pas être suffisament étendue dans le futur<br>
         3. Il est possible que les développeurs n'aient pas les compétences requises<br>
         4. L'équipe de développement risque d'être sujette à des changements<br>
@@ -441,8 +210,8 @@
         5. Il faut mettre en place un système pour s'assurer que les fournisseurs sont bien ceux qu'ils prétendent 
         être<br>
     </p>
+    <h2>Onglet Insight</h2>
     <p>
-        <h2>Onglet Insight</h2>
         <img src="Insights.png" alt="Github Insights">
     </p>
     
